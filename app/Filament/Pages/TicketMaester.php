@@ -17,6 +17,8 @@ class TicketMaester extends KanbanBoard
 {
     protected static string $model = Ticket::class;
 
+
+
     protected static string $statusEnum = TicketStatus::class;
 
     public function onStatusChanged(string|int $recordId, string $status, array $fromOrderedIds, array $toOrderedIds): void {
@@ -78,11 +80,12 @@ class TicketMaester extends KanbanBoard
         $user = Auth::user();
 
         if ($user->user_type === 'client') {
-            // Return tickets filtered by user's clinic_id
-            return Ticket::where('clinic_id', $user->clinic_id)->get();
+                    return Ticket::where('clinic_id', $user->clinic_id)
+                ->orderBy('order_column')
+                ->get();
         }
-        // For admin or staff, return all tickets
-        return Ticket::all();
+        return Ticket::orderBy('order_column')->get();
+
     }
 
     
