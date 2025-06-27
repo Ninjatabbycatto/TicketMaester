@@ -35,6 +35,10 @@
             group: 'filament-kanban',
             ghostClass: 'opacity-50',
             animation: 150,
+            delay: 300,           // <-- Delay in milliseconds before drag starts
+            delayOnTouchOnly: true, // Optional: apply delay only on touch devices
+
+
 
             onStart,
             onEnd,
