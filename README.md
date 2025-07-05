@@ -11,9 +11,6 @@ Since the teams used Plane.so for managing, which looks a lot like a kanban for 
 
 This was made using **Laravel Framework**, and used **Filament add-ons** due to its simplicity and quick setup! Thanks to its ease of use, most of the site was developed in less than **3 days**, and after that, some minor tweaks for bugs.
 
----
-
-![Screenshot 2](https://github.com/user-attachments/assets/1efa2cff-36be-466b-af4c-ce835ccbd94a)
 
 ![Screenshot 3](https://github.com/user-attachments/assets/ea480364-33ba-4ada-a8fc-16348d224efa)
 
